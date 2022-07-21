@@ -24,7 +24,7 @@ class Person < Nameable
   def add_rentals(rental)
     @rentals.push(rental) unless @rentals.include?(rental)
   end
-  
+
   private
 
   def of_age?
