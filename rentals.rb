@@ -1,3 +1,6 @@
+require 'pry'
+
+
 class Rental
   attr_accessor :date
 
@@ -9,3 +12,4 @@ class Rental
     book.add_rentals(self)
   end
 end
+binding.pry
