@@ -1,8 +1,12 @@
 require_relative 'app'
+require_relative 'display'
+require_relative 'create'
 
 class Main
   def initialize
     @app = App.new
+    @display = Display.new
+    @create = Create.new
   end
 
   def display_list
@@ -20,17 +24,17 @@ class Main
   def execute_option(option)
     case option
     when 1
-      @app.list_of_books
+      @display.list_of_books(@app.books)
     when 2
-      @app.list_of_people
+      @display.list_of_people(@app.people)
     when 3
-      @app.create_person
+      @create.create_person(@app.people)
     when 4
-      @app.create_book
+      @create.create_book(@app.books)
     when 5
-      @app.create_rental
+      @create.create_rental(@app.books, @app.people, @app.rentals)
     when 6
-      @app.display_rentals_by_person_id
+      @display.display_rentals_by_person_id(@app.books, @app.people, @app.rentals)
     else
       puts 'Not a valid option'
     end
