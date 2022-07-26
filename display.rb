@@ -1,7 +1,7 @@
 require_relative 'book'
 require_relative 'rentals'
 require_relative 'person'
-require_relative 'sturdent'
+require_relative 'student'
 require_relative 'teacher'
 
 class Display
