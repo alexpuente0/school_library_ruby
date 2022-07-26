@@ -7,4 +7,18 @@ class Teacher < Person
   def can_use_services?
     true
   end
+
+      def to_json(*args)
+    {
+      JSON.create_id  => self.class.name,
+      'age'         => @age,
+      'name'      => @name,
+      'specialization' => @specialization
+    }.to_json(*args)
+  end
+  # Deserialize JSON string by constructing new object with arguments.
+  def self.json_create(teacher)
+    new(teacher['age'].to_i, teacher['name'], teacher['specialization'])
+  end
+
 end

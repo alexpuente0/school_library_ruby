@@ -10,6 +10,7 @@ class Book
   def add_rentals(rental)
     @rentals.push(rental) unless @rentals.include?(rental)
   end
+  
   def to_json(*args)
     {
       JSON.create_id  => self.class.name,

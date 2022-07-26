@@ -50,6 +50,7 @@ class Main
       execute_option(option)
     end
     @app.save_books
+    @app.save_people
   end
 
   def main
