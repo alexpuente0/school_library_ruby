@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'app'
 require_relative 'display'
 require_relative 'create'
@@ -48,6 +49,7 @@ class Main
 
       execute_option(option)
     end
+    @app.save_books
   end
 
   def main
