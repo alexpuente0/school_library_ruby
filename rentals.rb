@@ -12,7 +12,7 @@ class Rental
 
   def to_json(*args)
     {
-      JSON.create_id  => self.class.name,
+      JSON.create_id  => "Rental2",
       'date'         => @date,
       'person_id'    => @person.id,
       'book_title' => @book.title

@@ -11,7 +11,7 @@ class Student < Person
     "¯\(ツ)/¯"
   end
 
-    def to_json(*args)
+  def to_json(*args)
     {
       JSON.create_id  => self.class.name,
       'age'         => @age,
