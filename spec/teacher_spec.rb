@@ -1,15 +1,15 @@
 require 'rspec/autorun'
-require_relative '../person.rb'
-require_relative '../book.rb'
-require_relative '../student.rb'
-require_relative '../teacher.rb'
-require_relative '../rentals.rb'
-require_relative '../classroom.rb'
+require_relative '../person'
+require_relative '../book'
+require_relative '../student'
+require_relative '../teacher'
+require_relative '../rentals'
+require_relative '../classroom'
 
 describe Teacher do
   before :each do
     @teacher = Teacher.new(55, 'Science', 'James')
-    end
+  end
 
   describe '#instance' do
     context '#new teacher' do
@@ -18,13 +18,13 @@ describe Teacher do
       end
     end
 
-      it 'should have the correct name' do
-        expect(@teacher.name).to eq 'James'
-      end
+    it 'should have the correct name' do
+      expect(@teacher.name).to eq 'James'
+    end
 
-      it 'should have the correct specialization' do
-        expect(@teacher.specialization).to eq 'Science'
-      end
+    it 'should have the correct specialization' do
+      expect(@teacher.specialization).to eq 'Science'
+    end
 
     context '#can_use_services?' do
       it 'should use services' do

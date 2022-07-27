@@ -1,16 +1,16 @@
 require 'rspec/autorun'
-require_relative '../person.rb'
-require_relative '../book.rb'
-require_relative '../student.rb'
-require_relative '../teacher.rb'
-require_relative '../rentals.rb'
-require_relative '../classroom.rb'
+require_relative '../person'
+require_relative '../book'
+require_relative '../student'
+require_relative '../teacher'
+require_relative '../rentals'
+require_relative '../classroom'
 
 describe Rental do
   describe '#instance' do
     classroom = Classroom.new('Math')
-    student = Student.new(age = 25, name = 'Alex', classroom = classroom)
-    teacher = Teacher.new(age = 33, name = 'Rudolph', specialization = 'English')
+    student = Student.new(25, 'Alex', classroom)
+    teacher = Teacher.new(33, 'English', 'Rudolph')
     book = Book.new('It', 'Stephen King')
 
     first_rental = Rental.new('2021-10-15', student, book)

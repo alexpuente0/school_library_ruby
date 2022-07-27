@@ -7,8 +7,8 @@ describe CapitalizeDecorator do
   end
   context 'test capitalizer' do
     it 'should return a name capitalized' do
-      Capitalized = CapitalizeDecorator.new(@student)
-      expect(Capitalized.correct_name).to eql "Alexis"
+      @capitalized = CapitalizeDecorator.new(@student)
+      expect(@capitalized.correct_name).to eql 'Alexis'
     end
   end
 end

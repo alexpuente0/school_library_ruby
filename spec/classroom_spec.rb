@@ -9,7 +9,7 @@ require_relative '../classroom'
 describe Classroom do
   before :each do
     @classroom = Classroom.new('History')
-    @student = Student.new(age = 17, classroom = @classroom)
+    @student = Student.new(17, @classroom)
     @classroom.add_student @student
   end
 

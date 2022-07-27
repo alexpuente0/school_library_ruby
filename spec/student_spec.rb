@@ -1,15 +1,15 @@
 require 'rspec/autorun'
-require_relative '../person.rb'
-require_relative '../book.rb'
-require_relative '../student.rb'
-require_relative '../teacher.rb'
-require_relative '../rentals.rb'
-require_relative '../classroom.rb'
+require_relative '../person'
+require_relative '../book'
+require_relative '../student'
+require_relative '../teacher'
+require_relative '../rentals'
+require_relative '../classroom'
 
 describe Student do
   before :each do
     @classroom = Classroom.new('History')
-    @student = Student.new(age = 17, classroom = @classroom)
+    @student = Student.new(17, @classroom)
   end
 
   describe '#instance' do
