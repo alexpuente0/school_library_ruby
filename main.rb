@@ -52,7 +52,6 @@ class Main
     @app.save_books
     @app.save_people
     @app.save_rentals
-    
   end
 
   def main
