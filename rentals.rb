@@ -10,17 +10,17 @@ class Rental
     book.add_rentals(self)
   end
 
-        def to_json(*args)
+  def to_json(*args)
     {
       JSON.create_id  => self.class.name,
       'date'         => @date,
-      'person'      => @person,
-      'book' => @book
+      'person_id'    => @person.id,
+      'book_title' => @book.title
     }.to_json(*args)
   end
   # Deserialize JSON string by constructing new object with arguments.
-  def self.json_create(teacher)
-    new(teacher['age'].to_i, teacher['name'], teacher['specialization'])
+  def self.json_create(rental)
+     new(rental['date'], rental['person_id'], rental['book_title'])
   end
 
 end

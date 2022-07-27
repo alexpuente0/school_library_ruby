@@ -11,8 +11,9 @@ class App
     @books = []
     @books = load_books if File.exists?("books.json")
     @people = []
-    @rentals = []
     @people = load_people if File.exists?('people.json')
+    @rentals = []
+    @people = load_rentals if File.exists?('rentals.json')
   end
 
   def load_books
@@ -27,6 +28,13 @@ class App
   end
   def save_people
     File.write("people.json", JSON.generate(@people), mode: "w")
+  end
+
+  def load_rentals
+    JSON.parse(File.read("rentals.json"), create_additions: true)
+  end
+  def save_rentals
+    File.write("rentals.json", JSON.generate(@rentals), mode: "w")
   end
 
 end
