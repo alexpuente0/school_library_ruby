@@ -1,4 +1,8 @@
 require_relative '../trim_decorator'
+require_relative '../person'
+require_relative '../nameable'
+require_relative '../student'
+require_relative '../teacher'
 
 describe TrimmerDecorator do
   before :each do

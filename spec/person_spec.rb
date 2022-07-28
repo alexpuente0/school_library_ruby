@@ -1,4 +1,3 @@
-require 'rspec/autorun'
 require_relative '../person'
 require_relative '../book'
 require_relative '../student'

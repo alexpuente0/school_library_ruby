@@ -1,4 +1,9 @@
 require_relative '../cap_decorator'
+require_relative '../person'
+require_relative '../nameable'
+require_relative '../student'
+require_relative '../teacher'
+require_relative '../classroom'
 
 describe CapitalizeDecorator do
   before :each do
