@@ -1,3 +1,4 @@
+require 'rspec/autorun'
 require_relative '../cap_decorator'
 require_relative '../person'
 require_relative '../nameable'
